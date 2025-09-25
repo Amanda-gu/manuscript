@@ -1,33 +1,114 @@
-@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap');
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
+</style>
+
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
+
+
+@font-face {
+	font-family: 'Chaplin';
+	src: 
+    url('Chaplin-Regular.otf') format(OpenType);
+}
+
+
+:root {
+    font-size: 150%;
+}
 
 html{
-
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(246, 246, 246);
 }
 
 body{
+    font-family: "Newsreader", serif;
+    color: rgb(8, 8, 8);
+    padding: 4rem; 
 
-    font-family:'Courier New', Courier, monospace;
-    color: springgreen;
-    padding: 3rem; 
 }
 *:not(:first-child) { 
-    margin-block-start: 1em; 
+    margin-block-start: 2em; 
 }
 
+/* heading styles */
+/* for all main content */
+
+.headings{
+    font-family: "Dosis", sans-serif;
+}
+
+
+/* heading style, quote, footnote--> font family*/
+hgroup, blockquote, aside {
+    p, time {
+        font-family: "Dosis", sans-serif;
+    }    
+}
 
 h1 {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: rgb(204, 255, 36);
-    font-size: 4rem;
+    font-size: 3.5rem;
 }
 
-.subheading {
-    color: blue;
+h2 {
+    font-size: 2.5rem;
+    transform: skew(7deg);
+}
+
+h3 {
     font-size: 2rem;
+    color: blue;
+}
+
+h4, nav {font-size: 1.3rem;}
+
+
+/* quote */
+
+blockquote {
+       #quote
+       {font-style: italic;}
+       padding-left: 20%;
+    }    
+
+/* footnotes */
+
+aside p{
+    font-size: 0.8rem;
+    padding-left: 20%;
 }
 
 
+/* all body */
 p {
-    font-family: "UnifrakturCook", cursive;
+    font-size: 1rem;
+    line-height: 1.7rem;
 }
+
+
+/* nav */
+nav {
+    text-transform: uppercase;
+}
+
+/* links */
+a {
+    text-decoration: underline dotted;
+}
+
+
+/* special styples */
+#rotation span{
+    transform: rotate(20deg);
+    display: inline-block;
+}
+
+/*  reflection */
+.reflection p{
+    font-family: 'Chaplin', serif;
+    font-size: 90%;
+}
+
+

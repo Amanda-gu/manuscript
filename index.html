@@ -2,18 +2,25 @@
 <html>
     <head>
         <title>Manuscript</title>
-        <!-- <link href="https://typography-interaction-2526.github.io/assets/reset.css" rel="stylesheet"> -->
+        <link href="reset.css" rel="stylesheet">
         <link href="style.css" rel="stylesheet">
         
     </head>
     <body>
         <header>
             <hgroup>
-                <h1><em>What's up, ITALICS?</em></h1>
-                <p class="subheading">Manuscript project for Typography & Interaction</p>
+                <h1 class="headings">What's up, <strong>italics?</strong></h1>
+                <p>Manuscript project for <a href="https://typography-interaction-2526.github.io/">Typography & Interaction</a> </p>
             </hgroup>
-            <nav>
-                <!-- nav here -->
+            <nav class="jumplinks headings">
+                <ul>
+					<li>
+						<a href="#italic">Roman Gornitsky’s essay</a>
+					</li>
+					<li>
+						<a href="#response">My response</a>
+					</li>
+				</ul>
             </nav>
         </header>
         
@@ -27,24 +34,26 @@
 
 <!-- ARTICLE -->
 
-            <article>
+            <article id="italic">
                 <hgroup>
-                    <h2><em>Italics?</em></h2>
-                    <p>Letters from The Temporary State</p>
+                    <h2 class="headings"><em>Italics?</em></h2>
+                    <p>Roman Gornitsky, Letters from The Temporary State 
+                      </p>  
+                    <time datetime="2019-03-26">March 26, 2019</time>
                 </hgroup>
 
-                <ul>
-                    <li>
-                        <h3>Italic Not Italic</h3>
+                
+                    <section>
+                        <h3 class="headings">Italic Not Italic</h3>
                         <p>
                             You should start making italics if you want people to buy your fonts.
                             Friendly advice,
                             2017
                         </p>
-                    </li>
+                    </section>
 
-                    <li>
-                        <h3>Is It Really Necessary?</h3>
+                    <section>
+                        <h3 class="headings">Is It Really Necessary?</h3>
                         
                             <p>
                                 The Chicago Manual of Style (whose cover is set entirely in italic) prescribes the use of italic for emphasis, book and movie titles, names of music albums, paintings and ships, for foreign words or quotations of texts in foreign language, for references of a word, letter or number as itself, when introducing or defining technical terms, for algebraic symbols, physical quantities and mathemethical constants, and in numerous other situations. Following those rules it’s practically impossible to set any text of significant length without the use of italic, which means that any type family without italic styles can find use in situational display applications only.
@@ -55,28 +64,28 @@
                             </p>
                                 
                             <blockquote>
-                                <h4>
+                                <h4 class="headings">
                                     Typographic Revolution
                                 </h4>
-                                    <em> 
+                                    <p id="quote"> 
                                         I am starting a typographic revolution, directed above all against the idiotic, sick-making conception of the old-fashioned Poetry Book, with its hand-made paper, its sixteenth-century style, decorated with galleons, Minervas, Apollos, great initials, flourishes, and mythological vegetables, with clasps, mottoes, and Roman numerals. The book must be the futuristic expression of our futuristic thought. Better: my revolution is against among other things the so-called typographic harmony of the page, which is in complete opposition to the flow of style which the page allows. We will, if need be, use 3 or 4 different colours and 20 different typefaces on the same page. For example: Italic for a series of similar and swift sensations, Bold for the imitation of heavy tones, and so on. A new conception of the typographic/painterly page.
-                                    </em>    
+                                    </p>    
                                     
-                                    <p>Filippo Marinetti<sup>1</sup>,
-                                        1919
+                                    <p id="quoteauthor">Filippo Marinetti<sup>1</sup>,
                                     </p>
+                                    <time>1919</time>
 
                             </blockquote>
                                 
-                            </footer>
+                            </aside>
                             
-                                 <ol>
-                                    <li>
-                                        In the first edition of the article this quote was mistakenly attributed to Jan Tschichold’s «New Typography» (where it is quoted). We apologize for this mistake. Thanks to Caluã Pataca for pointing it out.
-                                    </li>
-                                </ol>
+                           
+                                 <p>
+                                        1. In the first edition of the article this quote was mistakenly attributed to Jan Tschichold’s «New Typography» (where it is quoted). We apologize for this mistake. Thanks to Caluã Pataca for pointing it out.
+                                </p>
+                             
                                  
-                            </footer>
+                            </aside>
                             
 
                             <p>
@@ -95,13 +104,13 @@
                                 So it is rather natural, that the designers of Bauhaus, coming from blackletter-dominant German typographic tradition, seem to be the first ones to start practicing italicless typesetting within modern Western typography. Their magazine, «Bauhaus» did not have any italics, but instead a variety of other techniques (rather similar to blackletter examples mentioned above) was applied:
                             </p>
                     
-                    </li>
+                    </section>
 
                 
 
 
-                    <li>
-                        <h3>Slanted</h3>
+                    <section>
+                        <h3 class="headings">Slanted</h3>
                         
                             <p>
                                 It might be tempting to attribute the absence of italics in Bauhaus magazine to the unavailability of such styles at that time for sans serif fonts (which were mostly used in the magazine, even for longer texts), but actually italic grotesks were already quite common at that time and you can find italic sans serifs even in the 19th century specimens:
@@ -116,21 +125,34 @@
                                 There are a lot of arguments in favor of "true italics" and against the oblique/slanted styles. Especially the mechanically slanted fonts are disliked for their distorted outlines:
                             </p>
 
-                            <footer>
-                                <ol>
-                                    <li>
-                                        According to Bauhaus, «we write all lowercase, therefore saving time. besides: why 2 alphabets if one achieves the same? why write uppercase, if one can’t speak uppercase?» Even though we indeed don’t speak uppercase, the question of whether or not we speak italic can be argued.
-                                    </li>
+                            <aside>
+                                    <p>
+                                        2. According to Bauhaus, «we write all lowercase, therefore saving time. besides: why 2 alphabets if one achieves the same? why write uppercase, if one can’t speak uppercase?» Even though we indeed don’t speak uppercase, the question of whether or not we speak italic can be argued.
+                                    </p>
                             
-                                    <li>
-                                        The term "true italics" is used to differentiate italic styles that use cursive lettershapes from oblique styles that use slanted versions of upright characters. For many reasons obliques can be still named "italic" in the font files (especially in the case of pre-OpenType font formats).
-                                    </li>
-                                </ol>
-                            </footer>
+                                    <p>
+                                        3. The term "true italics" is used to differentiate italic styles that use cursive lettershapes from oblique styles that use slanted versions of upright characters. For many reasons obliques can be still named "italic" in the font files (especially in the case of pre-OpenType font formats).
+                                    </p>
+                            </aside>
 
                             <p>
                                 But wouldn’t exactly the mechanical distortion (and a noticable one) be most befitting for a modernist typeface, typeface of the machine world?
-                                And what about geometric grotesks? Typefaces, whose design is entirely based on simple geometric shapes — circles, rectangles, triangles. What sense does it make to try to play off a slanted by eleven degrees oval as a basic geomteric shape? If anything, the logical solution for an italic style of geometric grotesk would be not a slant, but rotation. This was the thought behind the new "italic" style of Five Years Later, FYL Rotated:
+
+                            </p>
+                            <p>
+                                And what about geometric grotesks? Typefaces, whose design is entirely based on simple geometric shapes — circles, rectangles, triangles. What sense does it make to try to play off a slanted by eleven degrees oval as a basic geomteric shape? If anything, the logical solution for an italic style of geometric grotesk would be not a slant, but 
+                                   
+                                <em id="rotation">
+                                    <span>r</span>
+                                    <span>o</span>
+                                    <span>t</span>
+                                    <span>a</span>
+                                    <span>t</span>
+                                    <span>i</span>
+                                    <span>o</span>
+                                    <span>n</span>
+                                </em>. 
+                                This was the thought behind the new "italic" style of Five Years Later, FYL Rotated:
                             </p>
 
                             <p>
@@ -145,18 +167,18 @@
                                 Adjusting metrics/kerning of the rotated typeface is an even bigger issue: instead of usual exercise of solving the familiar spacing puzzle of vertical, oval and diagonal shapes (finding the optimal metrics to balance the character pairs like "nn", "no", "oo", "on", "nv", "vn", "ov", "vo", "vv", etc.), you are presented with innumerable amount of spacing combinations and the only good solution here is, probably, to go one step back and adapt the lettershapes themselves for the new rotated conditions. Maybe, it will be done one day, but for now FYL Rotated tries to fix the spacing issue with an uninventive bruteforce of 4462 (class-)kerning pairs.
                             </p>
                         
-                    </li>
+                    </section>
 
 
-                    <li>
-                        <h3>International Italic Style</h3>
+                    <section>
+                        <h3 class="headings">International Italic Style</h3>
                         
                             <p>
                                 I can imagine, that an English-language typographer is so rooted in the idea of italic that it’s hard to keep in mind, that other writing systems (in fact, the absolute majority of them) don’t even have the concept of italic. After all, we are all familiar with this iconic button trio: . Will the italic button just not work on the Chinese text? Or will it just slant the text automatically, ignoring thousands of years of typographic tradition?
                             </p>
                             
                             <p>
-                                In the case of right-to-left writing systems (Arabic and Hebrew), this forced slant presents a curious question: in which direction should the text be slanted (considering that there is some reason to slant the text in the first place)?Well, of course it will slant:
+                                In the case of right-to-left writing systems (Arabic and Hebrew), this forced slant presents a curious question: in which direction should the text be slanted (considering that there is some reason to slant the text in the first place)? Well, of course it will slant:
                             </p>
 
                             <p>
@@ -171,11 +193,11 @@
                                 With these considerations in mind, four new styles were designed for <a href="https://type.tmpstate.net/preview/Panama/Proportional%20Regular/try/">Panama</a>: Monospace Italic, Monospace Iranic, Proportional Italic and Proportional Iranic (as in the case of straight cuts, proportional versions use the same outlines/letterforms as the monospace ones, only the spacing is different): 
                             </p>
                        
-                    </li>
+                    </section>
 
 
-                    <li>
-                        <h3>Other Updates</h3>
+                    <section>
+                        <h3 class="headings">Other Updates</h3>
                        
                             <p>
                                 Also, a number of small adjustments was made in straight cuts of Panama:
@@ -185,9 +207,9 @@
                                 If you previously bought any Panama fonts and would like to receive an updated version, please write an e-mail to mail@temporarystate.net with your order number or a company name/email address.
                             </p>
                         
-                    </li>
+                    </section>
 
-                </ul>
+                
 
 <!--all footnotes in one list  -->
                     <!-- <aside>
@@ -206,26 +228,19 @@
                         </ol>
                     </aside> -->
 
-                    
-                <footer>
-                    <small>
-                        Roman Gornitsky,
-                                The Temporary State
-                                26.03.2019
-                    </small>
-                </footer>
-
-                
+         
             </article>
             
             
 <!-- REFLECTION BELOW -->
            
-            <article>
+            <article id="response">
                 <hgroup>
-                    <h2><em>Reflection</em></h2>
+                    <h2 class="headings"><em>Slanted Thoughts</em></h2>
+                    <p>Amanda Guo</p>
                 </hgroup>
                 
+                <section class="reflection">
                     <p>
                         I enjoyed this piece because of how it rethinks the form of italics. I love italics – I find them fun, expressive, and more human than Roman, since they often embody the qualities of handwriting. For me, this applies especially to serif italics. In the article, the author frames it rhetorically: “the mechanical distortion (and a noticeable one) is most befitting for a modernist typeface, typeface of the machine world?” I love this angle of thinking, because in the modern world, all typefaces, even serif ones, are no longer bound to the physical qualities of print. They have gradually evolved into independent styles, while the idea of seeing letterforms on physical media has started to fade.
                     </p>
@@ -242,8 +257,15 @@
                     </p>
                     <p>
                         At the same time, I noticed how non-Latin scripts often reform themselves to follow Latin conventions—like inventing their own version of italics. It makes me wonder if the influence could flow in the opposite direction. Maybe there are expressive styles in other scripts that don’t exist in Latin yet, which could be brought over and reimagined. For example, in Chinese typesetting, a common way to emphasize text is to switch typefaces—such as dropping a serif style into a sans-serif context. Practices like this show how emphasis can take many forms, and they remind me that typography is less about rigid rules and more about inventiveness, play, and cultural exchange.
-                    </p>                
+                    </p>  
+                
+                </section>              
             </article>
+
+<!-- back to top reference from the example repo -->
+            <footer>
+                <a href="#">Top</a>
+		    </footer>
 
         </main>
         
