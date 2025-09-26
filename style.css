@@ -104,7 +104,28 @@ header {
 .maincontainer {
     padding: 4rem;
     inline-size: 75vw;
-    block-size: 100vh;
+    /* block-size: 100vh; */
+
+
+        /* space between sections heading and content */
+        section:not(:first-child) {
+        margin-block-start: 3rem;
+        }
+
+        /* spacing between ps */
+        section p:not(:first-child){
+        margin-block-start: 2rem;
+        }
+
+        /* space between article and response */
+        article:not(:first-child){
+        margin-block-start: 6rem;
+        }
+
+        footer {
+            margin-block-start: 2rem;
+            text-align: right;
+        }       
 }
 
 
@@ -112,35 +133,32 @@ header {
     z-index: 5;
 }
 
-#italicleft {
-    left: 0;
 
+
+
+/* used for 2 columns */
+/* #italicleft {
+    left: 0;
 }
 
 #responseright {
-    margin-block-start: 4rem; 
+    margin-block-start: 6rem; 
     right: 0;
     /* color: grey; */
-}
+} */
 
 
 
 
 /* spacing in the articles */
 
-/* space between article and response */
-section:not(:first-child) {
-   margin-block-start: 4rem;
+
+.maincontainer {
+
 }
 
-/* spacing between ps */
-section p:not(:first-child){
-   margin-block-start: 2rem;
-}
 
-footer {
-     margin-block-start: 2rem;
-}
+
 
 
 /* heading styles */
@@ -200,6 +218,7 @@ section p{
 /* footnotes */
 
 aside p{
+    padding-block-start: 1rem;
     padding-inline-start: 0%;
     font-size: 0.8rem;
     padding-inline-end: 20%;
