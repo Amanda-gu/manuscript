@@ -7,6 +7,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap');
+
 
 @font-face {
 	font-family: 'Chaplin';
@@ -16,79 +18,97 @@
 
 
 :root {
-    font-size: 120%;
+    font-size: 150%;
 }
 
 html{
-    background-color: rgb(231, 230, 225);
-    height:100%;
+    background-color: rgb(244, 243, 239);
+    display: block;
 }
 
 
 body {
 /* body font size */
+
     p {
         font-family: "Newsreader", serif;
-        color: rgb(30, 29, 29);
-        font-size: 1.1rem;
-        
+        /* color: rgb(30, 29, 29); */
+        line-height: 2em;
+     
     }
 /* font size of subheads and pull quote */
     hgroup, blockquote {
          p, time {
-            font-size: 1rem;
+            font-size: 1 rem;
          }    
     }
 }
 
-*:not(:first-child) { 
-    margin-block-start: 1.2em; 
-}
+
+/* space between block elements */
+/* *:not(:first-child) { 
+    margin-block-start: 2rem; 
+} */
 
 
 /* left and right scroll ref: https://codepen.io/altafhpatel/pen/JELMgx*/
 /* header bar */
-/* blocker: responseright has a padding on top- fixed */
 
+/* structure of the site */
 header {
-    padding: 2rem; 
+    
+    padding-block: 1rem; 
+    padding-inline: 4rem;
     position: fixed;
-    top: 0%;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow-y: hidden;
-    height:20%;
+    inline-size: 100%;
     background-color: rgba(231, 230, 225, 0.754);
    /*bg blur  */
     backdrop-filter: blur(3px);
    /* make it the foreground */
     z-index: 10;
+    background-color: rgba(0, 0, 0, 0.064);
+}
+
+
+#navbar {
+    display: inline-block;
 }
 
 /* how do i make both column scroll on its own and be visible? */
 
+.maincontainer {
+    padding: 4rem;
+    inline-size: 80vw;
+    block-size: 100vh;
+}
 
 
 #italicleft, #responseright {
-    padding: 2rem; 
-    position: absolute;
-    bottom: 0;
-    overflow-y: scroll;
     z-index: 5;
-    top: 20%;  
 }
 
 #italicleft {
     left: 0;
-    width: 60%;
+
 }
 
 #responseright {
-    margin-block-start: 0em; 
+    margin-block-start: 4rem; 
     right: 0;
-    width: 40%;
     /* color: grey; */
+}
+
+
+/* spacing in the articles */
+
+/* space between article and response */
+section:not(:first-child) {
+   margin-block-start: 4rem;
+}
+
+/* spacing between ps */
+section p:not(:first-child){
+   margin-block-start: 2rem;
 }
 
 
@@ -107,23 +127,31 @@ hgroup, blockquote, aside {
     }    
 }
 
-
-
+/* main title */
 h1 {
-    font-size: 2.5rem;
+    font-size: 1rem;
     line-height: 2rem;
+    text-transform: uppercase;
 }
 
+/* article/response title */
 h2 {
     font-size: 2.2rem;
+    position: sticky;
+    
 }
 
-
+/* section title */
 h3 {
     font-size: 1.5rem;
     color: rgb(0, 0, 0);
+    padding-block-end: 0.5ex;
+    text-transform: uppercase;
+    border-bottom: dotted;
+    border-color: black;
 }
 
+/* pullquote title */
 h4, nav {font-size: 1.2rem;}
 
 
@@ -131,15 +159,22 @@ h4, nav {font-size: 1.2rem;}
 /* how to make a hanging list? */
 
 blockquote {
-       #quote
-       {font-style: italic;}
-       padding-left: 20%;
-    }    
+
+    margin-block: 4rem;
+    color: dimgrey;
+    padding-inline-start: 20%;
+    
+       
+    #quote
+       {font-style: italic;        
+    }  
+}  
 
 /* footnotes */
+
 aside p{
     font-size: 0.8rem;
-    padding-left: 20%;
+    padding-inline-end: 20%;
     color: rgb(0, 38, 163);
   
 }
@@ -162,18 +197,74 @@ p {
     text-transform: uppercase;
 } */
 
-/* links */
-a {
-    text-decoration: underline dotted;
-    color: rgb(0, 38, 163);
-}
 
 
 /* special styples */
+strong {
+    font-weight: 700;
+}
+
+/* links */
+
+a {
+    text-decoration: underline dotted;
+    text-decoration-color:rgb(0, 38, 163);
+}
+
+
+a:not(.underlinecta)  {
+    
+    display: inline;
+    color: white;
+    text-decoration-color:rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+	margin-block-start: 0rem;
+    padding-inline: 1ex;
+    padding-block: 0.8ex;
+    border-radius: 0.4rem;
+    transform: skew(4deg);
+}
+
+
+a:hover {
+    color:  rgb(0, 51, 220);
+}
+
+a:not(.underlinecta):hover {
+    color: white;
+     background-color:  rgb(0, 51, 220);
+}
+
+#starter {
+    font-size:3rem;
+    line-height: 1.5em;
+    display: block;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    padding-inline: 2ex;
+    padding-block: 1ex;
+    border-radius: 0.4rem;
+    margin-inline-end: 20%;
+    
+}
+
+.glyphs {
+    font-size:0.8em;
+    display: inline;
+    color: rgb(0, 0, 0);
+    background-color: rgb(224, 224, 224);
+    padding-inline: 1ex;
+    padding-block: 0.8ex;
+    border-radius: 0.4rem;
+    margin-inline-end: 0.2ex;
+}
+
+
 #rotation span{
     transform: rotate(20deg);
     display: inline-block;
 }
+
 
 .makeitalic {
     font-style: italic;
@@ -190,6 +281,11 @@ a {
 
 .makeiranic {
     transform: skew(4deg);
+}
+
+.makeblackletter {  
+    font-family: "UnifrakturCook", cursive;
+    font-weight: 700;
 }
     
 /*  reflection */
