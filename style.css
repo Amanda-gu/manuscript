@@ -31,6 +31,7 @@ body {
         font-family: "Newsreader", serif;
         color: rgb(30, 29, 29);
         font-size: 1.1rem;
+        
     }
 /* font size of subheads and pull quote */
     hgroup, blockquote {
@@ -73,7 +74,7 @@ header {
     padding: 2rem; 
     position: absolute;
     bottom: 0;
-    overflow-y: visible;
+    overflow-y: scroll;
     z-index: 5;
     top: 20%;  
 }
@@ -81,14 +82,12 @@ header {
 #italicleft {
     left: 0;
     width: 60%;
-    overflow-y: scroll;
 }
 
 #responseright {
     margin-block-start: 0em; 
     right: 0;
     width: 40%;
-    overflow-y: scroll;
     /* color: grey; */
 }
 
@@ -182,11 +181,17 @@ a {
 
 
 /* this line not working */
-.makeiranic { 
-    transform: skew(7deg);
+
+
+.makeslanted p{ 
+    transform: skew(-4deg);
+    display: inline-block;
 }
 
-
+.makeiranic {
+    transform: skew(4deg);
+}
+    
 /*  reflection */
 
 .reflection p{
