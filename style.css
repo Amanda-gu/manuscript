@@ -11,27 +11,87 @@
 @font-face {
 	font-family: 'Chaplin';
 	src: 
-    url('Chaplin-Regular.otf') format(OpenType);
+    url('Chaplin-Medium.otf') format(OpenType);
 }
 
 
 :root {
-    font-size: 150%;
+    font-size: 120%;
 }
 
 html{
-    background-color: rgb(246, 246, 246);
+    background-color: rgb(231, 230, 225);
+    height:100%;
 }
 
-body{
-    font-family: "Newsreader", serif;
-    color: rgb(8, 8, 8);
-    padding: 4rem; 
 
+body {
+/* body font size */
+    p {
+        font-family: "Newsreader", serif;
+        color: rgb(30, 29, 29);
+        font-size: 1.1rem;
+    }
+/* font size of subheads and pull quote */
+    hgroup, blockquote {
+         p, time {
+            font-size: 1rem;
+         }    
+    }
 }
+
 *:not(:first-child) { 
-    margin-block-start: 2em; 
+    margin-block-start: 1.2em; 
 }
+
+
+/* left and right scroll ref: https://codepen.io/altafhpatel/pen/JELMgx*/
+/* header bar */
+/* blocker: responseright has a padding on top- fixed */
+
+header {
+    padding: 2rem; 
+    position: fixed;
+    top: 0%;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow-y: hidden;
+    height:20%;
+    background-color: rgba(231, 230, 225, 0.754);
+   /*bg blur  */
+    backdrop-filter: blur(3px);
+   /* make it the foreground */
+    z-index: 10;
+}
+
+/* how do i make both column scroll on its own and be visible? */
+
+
+
+#italicleft, #responseright {
+    padding: 2rem; 
+    position: absolute;
+    bottom: 0;
+    overflow-y: visible;
+    z-index: 5;
+    top: 20%;  
+}
+
+#italicleft {
+    left: 0;
+    width: 60%;
+    overflow-y: scroll;
+}
+
+#responseright {
+    margin-block-start: 0em; 
+    right: 0;
+    width: 40%;
+    overflow-y: scroll;
+    /* color: grey; */
+}
+
 
 /* heading styles */
 /* for all main content */
@@ -48,24 +108,28 @@ hgroup, blockquote, aside {
     }    
 }
 
+
+
 h1 {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
+    line-height: 2rem;
 }
 
 h2 {
-    font-size: 2.5rem;
-    transform: skew(7deg);
+    font-size: 2.2rem;
 }
+
 
 h3 {
-    font-size: 2rem;
-    color: blue;
+    font-size: 1.5rem;
+    color: rgb(0, 0, 0);
 }
 
-h4, nav {font-size: 1.3rem;}
+h4, nav {font-size: 1.2rem;}
 
 
 /* quote */
+/* how to make a hanging list? */
 
 blockquote {
        #quote
@@ -74,12 +138,18 @@ blockquote {
     }    
 
 /* footnotes */
-
 aside p{
     font-size: 0.8rem;
     padding-left: 20%;
+    color: rgb(0, 38, 163);
+  
 }
 
+sup {
+    vertical-align: super; /* Elevates the text above the baseline */
+    font-size: smaller;
+    color: rgb(0, 38, 163);
+}
 
 /* all body */
 p {
@@ -88,14 +158,15 @@ p {
 }
 
 
-/* nav */
-nav {
+/* nav jump links */
+/* nav {
     text-transform: uppercase;
-}
+} */
 
 /* links */
 a {
     text-decoration: underline dotted;
+    color: rgb(0, 38, 163);
 }
 
 
@@ -105,10 +176,27 @@ a {
     display: inline-block;
 }
 
+.makeitalic {
+    font-style: italic;
+}
+
+
+/* this line not working */
+.makeiranic { 
+    transform: skew(7deg);
+}
+
+
 /*  reflection */
+
 .reflection p{
     font-family: 'Chaplin', serif;
     font-size: 90%;
 }
 
+
+footer {
+    font-style: italic;
+    color: rgb(148, 148, 148);
+}
 
