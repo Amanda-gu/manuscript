@@ -23,7 +23,7 @@
 
 html{
     background-color: rgb(244, 243, 239);
-    display: block;
+
 }
 
 
@@ -72,29 +72,38 @@ hgroup, blockquote, aside {
 
 
 header {
-    display: inline-block;
+    width: 100%;
     padding-block: 1rem; 
     padding-inline: 4rem;
     position: fixed;
-    inline-size: 100%;
-    background-color: rgba(231, 230, 225, 0.754);
+    background-color:  rgba(244, 243, 239, 0.54);
    /*bg blur  */
     backdrop-filter: blur(3px);
    /* make it the foreground */
     z-index: 10;
-    background-color: rgba(0, 0, 0, 0.064);
 }
 
 
-#navbar {
+#navbar {  
     display: inline-block;
+    inline-size: 90rem;
+    color: rgb(0, 51, 220);
+    
+    #tni {
+    font-size: 0.8em;
+    margin-inline-end: 0;
+    }
 }
+
+
+
+
 
 /* how do i make both column scroll on its own and be visible? */
 
 .maincontainer {
     padding: 4rem;
-    inline-size: 80vw;
+    inline-size: 75vw;
     block-size: 100vh;
 }
 
@@ -148,14 +157,15 @@ h1 {
 
 /* article/response title */
 h2 {
-    font-size: 2.2rem;
+    font-size: 2rem;
     position: sticky;
+    text-transform: uppercase;
     
 }
 
 /* section title */
 h3 {
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: rgb(0, 0, 0);
     padding-block-end: 0.5ex;
     text-transform: uppercase;
@@ -192,14 +202,14 @@ aside p{
     padding-inline-start: 0%;
     font-size: 0.8rem;
     padding-inline-end: 20%;
-    color: rgb(0, 38, 163); 
+    color: rgb(0, 51, 220);
 }
 
 sup {
     vertical-align: super; /* Elevates the text above the baseline */
     font-size: 0.8em;
     color: rgb(255, 255, 255);
-    background-color: rgb(0, 38, 163);
+    background-color: rgb(0, 51, 220);
     font-family: "Newsreader", serif;
     display: inline;
 	margin-block-start: 0rem;
@@ -222,35 +232,35 @@ strong {
     font-weight: 600;
 }
 
-/* links */
 
+/* cta styles */
+/* underline cta */
 a {
     text-decoration: underline dotted;
-    text-decoration-color:rgb(0, 38, 163);
+    text-decoration-color:rgb(0, 51, 220);
 }
-
-
-a:not(.underlinecta)  {
-    
-    display: inline;
-    color: white;
-    text-decoration-color:rgb(255, 255, 255);
-    background-color: rgb(0, 0, 0);
-	margin-block-start: 0rem;
-    padding-inline: 1ex;
-    padding-block: 0.8ex;
-    border-radius: 0.4rem;
-    transform: skew(4deg);
-}
-
 
 a:hover {
     color:  rgb(0, 51, 220);
 }
 
+/* main ctas */
+a:not(.underlinecta)  {
+    display: inline;
+    color: white;
+    text-decoration-color:rgb(255, 255, 255);
+    background-color: rgb(0, 51, 220);
+	margin-block-start: 0rem;
+    font-size: 0.9em;
+    padding-inline: 1ex;
+    padding-block: 0.4ex;
+    border-radius: 0.4rem;
+    transform: skew(4deg);
+}
+
 a:not(.underlinecta):hover {
     color: white;
-     background-color:  rgb(0, 51, 220);
+    background-color: rgb(0, 0, 0);
 }
 
 #starter {
