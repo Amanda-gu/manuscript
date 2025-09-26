@@ -171,6 +171,7 @@ h3 {
     text-transform: uppercase;
     border-bottom: dotted;
     border-color: black;
+    position: sticky;
 }
 
 /* pullquote title */
