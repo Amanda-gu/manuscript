@@ -54,6 +54,8 @@ body {
 /* for article */
 .headings{
     font-family: "Dosis", sans-serif;
+    text-transform: uppercase;
+
 }
 
 
@@ -73,8 +75,8 @@ hgroup, blockquote, aside {
 
 header {
     width: 100%;
-    padding-block: 1rem; 
-    padding-inline: 4rem;
+    padding-block: 0.8rem; 
+    padding-inline: 5rem;
     position: fixed;
     background-color:  rgba(244, 243, 239, 0.54);
    /*bg blur  */
@@ -97,12 +99,13 @@ header {
 
 
 
-
-
 /* how do i make both column scroll on its own and be visible? */
 
+
+
 .maincontainer {
-    padding: 4rem;
+
+    padding: 5rem;
     inline-size: 75vw;
     /* block-size: 100vh; */
 
@@ -129,11 +132,26 @@ header {
 }
 
 
+/* sidebar */
+/* todo: add a box around? */
+
+.jumplinks {
+    display: block;
+    position: fixed;
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+    inline-size: 100vw;
+    padding: 5rem;
+    text-align: right;
+    color:rgb(0, 51, 220);
+
+}
+
+/* main content */
+
 #italicleft, #responseright {
     z-index: 5;
 }
-
-
 
 
 /* used for 2 columns */
@@ -144,21 +162,10 @@ header {
 #responseright {
     margin-block-start: 6rem; 
     right: 0;
-    /* color: grey; */
+    color: grey;
 } */
 
-
-
-
 /* spacing in the articles */
-
-
-.maincontainer {
-
-}
-
-
-
 
 
 /* heading styles */
@@ -170,14 +177,13 @@ header {
 h1 {
     font-size: 1rem;
     line-height: 2rem;
-    text-transform: uppercase;
 }
 
 /* article/response title */
 h2 {
     font-size: 2rem;
     position: sticky;
-    text-transform: uppercase;
+
     
 }
 
@@ -186,7 +192,6 @@ h3 {
     font-size: 1rem;
     color: rgb(0, 0, 0);
     padding-block-end: 0.5ex;
-    text-transform: uppercase;
     border-bottom: dotted;
     border-color: black;
     position: sticky;
@@ -237,13 +242,6 @@ sup {
     padding-block: 0.2ex;
     border-radius: 0.4rem;
 }
-
-
-
-/* nav jump links */
-/* nav {
-    text-transform: uppercase;
-} */
 
 
 
