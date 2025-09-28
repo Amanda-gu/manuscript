@@ -29,7 +29,6 @@ html{
 
 body {
 /* body font size */
-
     p {       
         font-family: "Newsreader", serif;
         /* color: rgb(30, 29, 29); */
@@ -41,6 +40,8 @@ body {
             font-size: 1 rem;
          }    
     }
+
+    margin-block-end: calc(7%);
 }
 
 
@@ -72,7 +73,7 @@ hgroup, blockquote, aside {
 } */
 
 
-
+/* nav bar */
 header {
     width: 100%;
     padding-block: 0.8rem; 
@@ -87,42 +88,43 @@ header {
 
 
 #navbar {  
-    display: inline-block;
-    inline-size: 90rem;
     color: rgb(0, 51, 220);
+
+/* navbar position left and right */
+    h1 {
+     float: left;
+    }
     
     #tni {
     font-size: 0.8em;
     margin-inline-end: 0;
+    float: right;
     }
 }
 
 
 
-/* how do i make both column scroll on its own and be visible? */
-
 
 
 .maincontainer {
 
-    padding: 5rem;
-    inline-size: 75vw;
-    /* block-size: 100vh; */
-
+    padding-inline: 5rem;
+    max-inline-size: 80ch;
+    
 
         /* space between sections heading and content */
         section:not(:first-child) {
-        margin-block-start: 3rem;
+        margin-block-start: calc(10%);
         }
 
         /* spacing between ps */
         section p:not(:first-child){
-        margin-block-start: 2rem;
+        margin-block-start: calc(7%);
         }
 
         /* space between article and response */
         article:not(:first-child){
-        margin-block-start: 6rem;
+        margin-block-start: calc(15%);
         }
 
         footer {
@@ -132,26 +134,43 @@ header {
 }
 
 
+
+
+
+
 /* sidebar */
 /* todo: add a box around? */
 
 .jumplinks {
     display: block;
     position: fixed;
+   
     font-size: 0.8rem;
     line-height: 1.5rem;
     inline-size: 100vw;
+    
     padding: 5rem;
-    text-align: right;
-    color:rgb(0, 51, 220);
+    color:rgb(255, 255, 255);
 
+    ul {
+        float: inline-end;
+        background-color: rgb(0, 51, 220);
+        padding-inline: calc(2%);
+        padding-block: calc(1%);
+        border-radius: 1rem;
+    }
+
+    
 }
 
 /* main content */
 
 #italicleft, #responseright {
     z-index: 5;
+    padding-block-start: 5rem;
 }
+
+
 
 
 /* used for 2 columns */
@@ -174,31 +193,36 @@ header {
 
 
 /* main title */
-h1 {
+h1, #tni {
     font-size: 1rem;
-    line-height: 2rem;
+    line-height: 1.5rem;
 }
+
 
 /* article/response title */
 h2 {
     font-size: 2rem;
-    position: sticky;
-
-    
+    position: sticky;   
 }
 
 /* section title */
 h3 {
     font-size: 1rem;
     color: rgb(0, 0, 0);
-    padding-block-end: 0.5ex;
+    padding-block: 0.5ex;
     border-bottom: dotted;
     border-color: black;
     position: sticky;
+    inset-block-start: 3rem;
+	inset-inline-start: 4rem;
+    background-color: rgb(244, 243, 239);
+    z-index: 5;
 }
 
 /* pullquote title */
 h4, nav {font-size: 1.2rem;}
+
+
 
 
 /* quote */
@@ -217,7 +241,7 @@ blockquote {
 
 /* paragraph indent */
 section p{
-    padding-inline-start: 10%;
+   margin-left: 3em;
 }
 
 /* footnotes */
@@ -264,25 +288,25 @@ a:hover {
 
 /* main ctas */
 a:not(.underlinecta)  {
+    
     display: inline;
     color: white;
-    text-decoration-color:rgb(255, 255, 255);
     background-color: rgb(0, 51, 220);
 	margin-block-start: 0rem;
     font-size: 0.9em;
     padding-inline: 1ex;
     padding-block: 0.4ex;
     border-radius: 0.4rem;
-    transform: skew(4deg);
 }
 
 a:not(.underlinecta):hover {
     color: white;
     background-color: rgb(0, 0, 0);
+    text-decoration-color:rgb(255, 255, 255);
 }
 
 #starter {
-    font-size:3rem;
+    font-size:2em;
     line-height: 1.5em;
     display: block;
     color: white;
@@ -290,7 +314,6 @@ a:not(.underlinecta):hover {
     padding-inline: 2ex;
     padding-block: 1ex;
     border-radius: 0.4rem;
-    margin-inline-end: 20%;
     
 }
 
