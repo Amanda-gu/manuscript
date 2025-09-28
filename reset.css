@@ -3,7 +3,7 @@
 /* Remove all the styles of the “User-Agent-Stylesheet” except for the `display` property. */
 *:where(:not(html, svg *, symbol *)) {
 	all: unset;
-	display: revert;
+	display: revert; 
 }
 
 /* Preferred box-sizing value. */
