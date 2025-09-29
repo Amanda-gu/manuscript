@@ -78,8 +78,9 @@ header {
     width: 100%;
     padding-block: 0.8rem; 
     padding-inline: 5rem;
-    position: fixed;
-    background-color:  rgba(232, 233, 245, 0.54);
+    position: sticky;
+    inset-block-start: 0rem;
+    background-color:  rgba(65, 65, 65, 0.05);
    /*bg blur  */
     backdrop-filter: blur(3px);
    /* make it the foreground */
@@ -88,17 +89,19 @@ header {
 
 
 #navbar {  
-    color: rgb(0, 51, 220);
+    color: rgb(0, 0, 0);
+    display: flex; 
+    justify-content: space-between;
 
 /* navbar position left and right */
     h1 {
-     float: left;
+     /* float: left; */
     }
     
     #tni {
     font-size: 0.8em;
     margin-inline-end: 0;
-    float: right;
+    /* float: right; */
     }
 }
 
@@ -106,11 +109,10 @@ header {
 
 
 
-.maincontainer {
+#maincontainer {
 
     padding-inline: 5rem;
     max-inline-size: 80ch;
-    
 
         /* space between sections heading and content */
         section:not(:first-child) {
@@ -149,7 +151,7 @@ header {
     line-height: 1.5rem;
     inline-size: 100vw;
     
-    padding: 5rem;
+    padding-inline: 5rem;
     color:rgb(255, 255, 255);
 
     ul {
@@ -165,16 +167,31 @@ header {
 
 /* main content */
 
-#italicleft, #responseright {
-    z-index: 5;
-    padding-block-start: 5rem;
+main {
+    padding-block-start: 1.5rem;
 }
 
 
 
+#italicleft, #responseright {
+    z-index: 5;    
+    /* paragraph indent */
+    
+    section p{
+   margin-left: 2.5rem;
+    }
+    
+}
+
+
+
+
+  
+
 #responseright {
    background-color:  rgba(232, 233, 245, 0.54);
-   padding: calc(8%);
+   padding-inline: calc(8%);
+   padding-block: calc(10%);
    color: rgba(0, 0, 0, 0.68);
 }
 
@@ -217,13 +234,13 @@ h2 {
 h3 {
     font-size: 1rem;
     color: rgb(0, 0, 0);
-    padding-block: 0.5ex;
+    padding-block: 0.8ex;
     border-bottom: dotted;
     border-color: black;
     position: sticky;
-    inset-block-start: 3rem;
-	inset-inline-start: 4rem;
-    background-color: rgb(244, 243, 239);
+    inset-block-start: 4rem;
+    background-color: rgba(244, 243, 239, 1);
+    backdrop-filter: blur(3px);
     z-index: 5;
 }
 
@@ -231,6 +248,45 @@ h3 {
 h4, nav {font-size: 1.2rem;}
 
 
+/* about author section
+ */
+.author {
+  
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+    font-family: "Newsreader", serif;
+    color:rgb(0, 0, 0);
+    border-color: black;
+    border-style: dotted;
+    background-color: rgb(255, 255, 255);
+    padding-inline: calc(4%);
+    padding-block: calc(3%);
+    border-radius: 0.4rem;
+    margin-block-start: 3rem;
+ 
+
+    #moreauthorhead {
+        margin-left: 0rem;
+        border-bottom: dotted;
+        border-color: black;
+        text-transform: uppercase;  
+        font-size: 0.5rem;
+        line-height: 0.8rem;
+        font-weight:700;
+        padding-block-end: calc(1%);
+    }
+
+    .authorcontent{
+        line-height: 1.2rem;
+        padding-block-start: 0.5rem;
+        }
+
+    .moreauthorlinks{
+        padding-block-start: 1.5rem;
+    }
+
+
+    }
 
 
 /* quote */
@@ -247,10 +303,7 @@ blockquote {
     }  
 }  
 
-/* paragraph indent */
-section p{
-   margin-left: 2.5rem;
-}
+
 
 /* footnotes */
 
@@ -374,7 +427,7 @@ a:not(.underlinecta):hover {
 }   
 
 
-#chaplin {
+.smalltype, #chaplin {
     font-family: "Dosis", sans-serif;
     font-size: 0.6em;
 }
