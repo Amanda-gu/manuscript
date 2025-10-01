@@ -16,7 +16,7 @@
 
 
 :root {
-    font-size: 150%;
+    font-size: 130%;
 }
 
 html{
@@ -37,7 +37,7 @@ body {
 /* font size of subheads and pull quote */
     hgroup, blockquote {
          p, time {
-            font-size: 1 rem;
+            font-size: 1rem;
          }    
     }
 
@@ -103,13 +103,6 @@ main {
     color: rgb(0, 0, 0);
     display: flex; 
     justify-content: space-between;
-
-/* navbar position left and right */    
-    #tni {
-        font-size: 0.8em;
-        margin-inline-end: 0;
-
-    }
 }
 
 
@@ -120,7 +113,7 @@ main {
 #maincontainer {
 
     padding-inline: 5rem;
-    max-inline-size: 72ch;
+    max-inline-size: 75ch;
 
         /* spacing between sections heading and content */
         section:not(:first-child) {
@@ -130,7 +123,7 @@ main {
 
         /* space between article and response */
         article:not(:first-child){
-        margin-block-start: 15%;
+        margin-block-start: 7rem;
         }
 
         footer {
@@ -139,12 +132,12 @@ main {
         }    
 /* spacing between ps */
         section p:not(:first-child){
-            margin-block-start: 7%;             
+            margin-block-start: 3rem;             
         }
 /* spacing between h1 and author */
         #italicleft, #responseright {
             .authornametime{
-                margin-block-start: 2%;
+                margin-block-start: 0.8rem;
             
             } 
         }
@@ -154,9 +147,13 @@ main {
 /* spacing between within the box*/                
             .authorinfo{
                    p {
-                    margin-block-start: 1%;
+                    margin-block-start: 0.3rem;
                    }
-            }
+                }
+            .moreauthorlinks{
+                margin-block-start: 0;
+                }
+            
          }
 
             blockquote{
@@ -178,13 +175,17 @@ main {
 
 /* spacing between article and response*/
         #responseright {
-             margin-block-start: 30%; 
+             margin-block-start: 8rem; 
         }
+
 
 /* spacing between the border line and related content*/
         #related{
+
+            margin-block-start: 3rem;
+
             p{
-             margin-block-start: 3%;
+             margin-block-start: 1.2rem;
             }
         }
 
@@ -192,23 +193,17 @@ main {
 
 
 
-
-
-
 /* sidebar */
 /* todo: add a box around? */
 
 .jumplinks {
-    /* display: block; */
     position: fixed;
-    
-    font-size: 0.8rem;
-    line-height: 1.5rem;
+    line-height: 2rem;
     width: 100%;
     max-width: 1600px;
     padding-inline: 5rem;
     color:rgb(255, 255, 255);
-
+/* align-items reference https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container */
     display: flex; 
     align-items: right;
     justify-content: right;
@@ -216,8 +211,8 @@ main {
     ul {
 
         background-color: rgb(0, 51, 220);
-        padding-inline: 2%;
-        padding-block: 1%;
+        padding-inline: 1.5rem;
+        padding-block: 1.3rem;
         border-radius: 0.4rem;
     }
 
@@ -262,14 +257,21 @@ main {
         font-size: 0.8rem;
         color: rgb(99, 99, 99);
         margin-left: 0;
-}
+    }
+
+    #chaplin {
+        font-family: "Dosis", sans-serif;
+        font-size: 0.8em;
+        margin-block-start: 2rem;
+
+    }
 
 }
 
 
 
 /* main title */
-h1, #tni {
+h1, nav, #tni {
     font-size: 1rem;
     line-height: 1.5rem;
 }
@@ -295,7 +297,7 @@ h3 {
 }
 
 /* pullquote title */
-h4, nav {font-size: 1.2rem;}
+h4 {font-size: 1.2rem;}
 
 
 
@@ -305,17 +307,15 @@ h4, nav {font-size: 1.2rem;}
  */
 .authorinfo {
   
-    font-size: 0.8rem;
+    
     line-height: 1.5rem;
     font-family: "Dosis", sans-serif;
     color:rgb(0, 0, 0);
-    /* border-color: black;
-    border-style: dotted; */
     background-color: rgb(255, 255, 255);
-    padding-inline: 4%;
-    padding-block: 3%;
+    padding-inline: 1.5rem;
+    padding-block: 1.8rem;
     border-radius: 0.4rem;
-    margin-block-start: 3rem;
+
  
 
     #moreauthorhead {
@@ -323,15 +323,16 @@ h4, nav {font-size: 1.2rem;}
         border-bottom: dotted;
         border-color: black;
         text-transform: uppercase;  
-        font-size: 0.5rem;
-        line-height: 0.8rem;
+        font-size: 0.7rem;
+        line-height: 1rem;
         font-weight:700;
-        padding-block-end: 1%;
+        padding-block-end: 0.5rem;
     }
 
     .authorcontent{
+        font-size: 0.8rem;
         line-height: 1.2rem;
-        padding-block-start: 0.5rem;
+        padding-block-start: 0.45rem;
         }
 
     .moreauthorlinks{
@@ -345,14 +346,12 @@ h4, nav {font-size: 1.2rem;}
     border-block-start: solid;
     border-width: 0.05rem;
     border-block-start-color: rgb(148, 148, 148);
-    margin-block-start: 3rem;
     font-size: 0.8rem;
     line-height: 1.5rem;
 
     p {
         font-family: "Dosis", sana-serif;
         color:rgb(148, 148, 148);
-        margin-block-start: 1%;
     }
     
 }
@@ -379,10 +378,10 @@ blockquote {
 /* footnotes */
 
 aside p{
-    padding-block-start: 1rem;
-    padding-inline-start: 0%;
+    padding-block-start: 0.5rem;
+    padding-inline-start: 0;
     font-size: 0.8rem;
-    padding-inline-end: 20%;
+    padding-inline-end: 30%;
     color: rgb(0, 51, 220);
 }
 
@@ -477,10 +476,12 @@ strong {
 }   
 
 
-.smalltype, #chaplin {
+.smalltype{
     font-family: "Dosis", sans-serif;
-    font-size: 0.6em;
+    font-size: 0.8em;
 }
+
+
 
 footer {
 
