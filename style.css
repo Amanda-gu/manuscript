@@ -1,9 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap');
 
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
-</style>
+@import url('https://fonts.googleapis.com/css2?family=Rosarivo:ital@0;1&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
 
@@ -22,15 +20,17 @@
 }
 
 html{
-    background-color: rgb(244, 243, 239);
-
+    background-color: rgb(250, 249, 247);
+    scroll-behavior: smooth;
+    
 }
 
 
 body {
+
 /* body font size */
     p {       
-        font-family: "Newsreader", serif;
+        font-family: "Rosarivo", serif;
         /* color: rgb(30, 29, 29); */
         line-height: 2em;     
     }
@@ -41,16 +41,11 @@ body {
          }    
     }
 
-    margin-block-end: calc(7%);
+    margin-block-end: 7%;
 }
 
 
 /* typefaces */
-/*  reflection */
-.reflection p{
-    font-family: 'Chaplin', serif;
-    font-size: 90%;
-}
 
 /* for article */
 .headings{
@@ -75,16 +70,32 @@ hgroup, blockquote, aside {
 
 /* nav bar */
 header {
-    width: 100%;
-    padding-block: 0.8rem; 
-    padding-inline: 5rem;
     position: sticky;
     inset-block-start: 0rem;
-    background-color:  rgba(65, 65, 65, 0.05);
-   /*bg blur  */
-    backdrop-filter: blur(3px);
-   /* make it the foreground */
+    background-color:  rgba(245, 244, 244, 0.69);
+        /*bg blur  */
+    backdrop-filter: blur(6px);
+        /* make it the foreground */
     z-index: 10;
+    
+
+    hgroup{
+        max-width: 1600px;
+        margin-inline: auto;
+        padding-block: 0.8rem; 
+        padding-inline: 5rem;
+        
+    }
+   
+}
+
+
+
+main {
+    max-width: 1600px;
+    margin-inline: auto;
+    padding-block-start: 1.5rem;
+    z-index: 5;    
 }
 
 
@@ -93,46 +104,90 @@ header {
     display: flex; 
     justify-content: space-between;
 
-/* navbar position left and right */
-    h1 {
-     /* float: left; */
-    }
-    
+/* navbar position left and right */    
     #tni {
-    font-size: 0.8em;
-    margin-inline-end: 0;
-    /* float: right; */
+        font-size: 0.8em;
+        margin-inline-end: 0;
+
     }
 }
 
 
 
 
+/* spacing */
 
 #maincontainer {
 
     padding-inline: 5rem;
-    max-inline-size: 80ch;
+    max-inline-size: 72ch;
 
-        /* space between sections heading and content */
+        /* spacing between sections heading and content */
         section:not(:first-child) {
-        margin-block-start: calc(10%);
+        margin-block-start: 8%;
         }
 
-        /* spacing between ps */
-        section p:not(:first-child){
-        margin-block-start: calc(7%);
-        }
 
         /* space between article and response */
         article:not(:first-child){
-        margin-block-start: calc(15%);
+        margin-block-start: 15%;
         }
 
         footer {
-            margin-block-start: 2rem;
-            text-align: right;
-        }       
+            margin-block-start: 2.5rem;
+            text-align: left;
+        }    
+/* spacing between ps */
+        section p:not(:first-child){
+            margin-block-start: 7%;             
+        }
+/* spacing between h1 and author */
+        #italicleft, #responseright {
+            .authornametime{
+                margin-block-start: 2%;
+            
+            } 
+        }
+
+        #italicleft {           
+            hgroup{
+/* spacing between within the box*/                
+            .authorinfo{
+                   p {
+                    margin-block-start: 1%;
+                   }
+            }
+         }
+
+            blockquote{
+            
+                #quote {
+                    margin-block-start: 1.5rem;
+                }
+
+                #quoteauthor {
+                    margin-block-start: 0.75rem;
+                }
+
+                margin-block: 2.5rem;
+                padding-inline-start: 20%;
+    
+            }
+        }
+
+
+/* spacing between article and response*/
+        #responseright {
+             margin-block-start: 30%; 
+        }
+
+/* spacing between the border line and related content*/
+        #related{
+            p{
+             margin-block-start: 3%;
+            }
+        }
+
 }
 
 
@@ -144,76 +199,72 @@ header {
 /* todo: add a box around? */
 
 .jumplinks {
-    display: block;
+    /* display: block; */
     position: fixed;
-   
+    
     font-size: 0.8rem;
     line-height: 1.5rem;
-    inline-size: 100vw;
-    
+    width: 100%;
+    max-width: 1600px;
     padding-inline: 5rem;
     color:rgb(255, 255, 255);
 
+    display: flex; 
+    align-items: right;
+    justify-content: right;
+
     ul {
-        float: inline-end;
+
         background-color: rgb(0, 51, 220);
-        padding-inline: calc(2%);
-        padding-block: calc(1%);
+        padding-inline: 2%;
+        padding-block: 1%;
         border-radius: 0.4rem;
     }
 
     
 }
 
+
+
+
 /* main content */
 
-main {
-    padding-block-start: 1.5rem;
+#italicleft {
+    .authornametime {
+        text-transform: uppercase;
+        p {
+             font-family: "Dosis", sans-serif;
+        }
+       
+        font-size: 0.8rem;
+        color: rgb(99, 99, 99);
 }
-
-
-
-#italicleft, #responseright {
-    z-index: 5;    
-    /* paragraph indent */
-    
-    section p{
-   margin-left: 2.5rem;
-    }
-    
 }
-
-
-
-
-  
 
 #responseright {
    background-color:  rgba(232, 233, 245, 0.54);
-   padding-inline: calc(8%);
-   padding-block: calc(10%);
-   color: rgba(0, 0, 0, 0.68);
+   padding-inline: 8%;
+   padding-block: 10%;
+   color: rgba(0, 0, 0);
+   border-radius: 0.4rem;
+
+   section p{
+        font-family: 'Chaplin';
+        font-size-adjust: 90%;
+    }
+
+    .authornametime {
+        text-transform: uppercase;
+        p {
+             font-family: "Dosis", sans-serif;
+        }
+       
+        font-size: 0.8rem;
+        color: rgb(99, 99, 99);
+        margin-left: 0;
 }
 
-
-
-
-/* used for 2 columns */
-/* #italicleft {
-    left: 0;
 }
-
-#responseright {
-    margin-block-start: 6rem; 
-    right: 0;
-    color: grey;
-} */
-
-/* spacing in the articles */
-
-
-/* heading styles */
-/* for all main content */
 
 
 
@@ -237,30 +288,32 @@ h3 {
     padding-block: 0.8ex;
     border-bottom: dotted;
     border-color: black;
-    position: sticky;
-    inset-block-start: 4rem;
-    background-color: rgba(244, 243, 239, 1);
+    /* position: sticky;
+    inset-block-start: 4rem; */
+    background-color: rgb(250, 249, 247);
     backdrop-filter: blur(3px);
-    z-index: 5;
 }
 
 /* pullquote title */
 h4, nav {font-size: 1.2rem;}
 
 
+
+
+
 /* about author section
  */
-.author {
+.authorinfo {
   
     font-size: 0.8rem;
     line-height: 1.5rem;
-    font-family: "Newsreader", serif;
+    font-family: "Dosis", sans-serif;
     color:rgb(0, 0, 0);
-    border-color: black;
-    border-style: dotted;
+    /* border-color: black;
+    border-style: dotted; */
     background-color: rgb(255, 255, 255);
-    padding-inline: calc(4%);
-    padding-block: calc(3%);
+    padding-inline: 4%;
+    padding-block: 3%;
     border-radius: 0.4rem;
     margin-block-start: 3rem;
  
@@ -273,7 +326,7 @@ h4, nav {font-size: 1.2rem;}
         font-size: 0.5rem;
         line-height: 0.8rem;
         font-weight:700;
-        padding-block-end: calc(1%);
+        padding-block-end: 1%;
     }
 
     .authorcontent{
@@ -285,21 +338,39 @@ h4, nav {font-size: 1.2rem;}
         padding-block-start: 1.5rem;
     }
 
-
     }
 
+
+#related {
+    border-block-start: solid;
+    border-width: 0.05rem;
+    border-block-start-color: rgb(148, 148, 148);
+    margin-block-start: 3rem;
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+
+    p {
+        font-family: "Dosis", sana-serif;
+        color:rgb(148, 148, 148);
+        margin-block-start: 1%;
+    }
+    
+}
+
+#related:hover {
+    transform: skew(2deg);
+}
 
 /* quote */
 /* how to make a hanging list? */
 
 blockquote {
 
-    margin-block: 4rem;
-    color: dimgrey;
-    padding-inline-start: 20%;
-    
+    color: rgb(99, 34, 34);  
     #quote
-       {font-style: italic;        
+       {font-style: italic; 
+        font-size: 0.8rem;  
+        color: rgb(0, 0, 0);     
     }  
 }  
 
@@ -337,34 +408,6 @@ strong {
 
 
 /* cta styles */
-/* underline cta */
-a {
-    text-decoration: underline dotted;
-    text-decoration-color:rgb(0, 51, 220);
-}
-
-a:hover {
-    color:  rgb(0, 51, 220);
-}
-
-/* main ctas */
-a:not(.underlinecta)  {
-    
-    display: inline;
-    color: white;
-    background-color: rgb(0, 51, 220);
-	margin-block-start: 0rem;
-    font-size: 0.9em;
-    padding-inline: 1ex;
-    padding-block: 0.4ex;
-    border-radius: 0.4rem;
-}
-
-a:not(.underlinecta):hover {
-    color: white;
-    background-color: rgb(0, 0, 0);
-    text-decoration-color:rgb(255, 255, 255);
-}
 
 #starter {
     font-size:2em;
@@ -408,9 +451,16 @@ a:not(.underlinecta):hover {
 
 
 .makeslanted p{ 
+    transform: skew(4deg);
+    display: inline-block;
+}
+
+.makeslanted p:hover{ 
     transform: skew(-4deg);
     display: inline-block;
 }
+
+
 
 .makeiranic {
     transform: skew(4deg);
@@ -433,7 +483,62 @@ a:not(.underlinecta):hover {
 }
 
 footer {
+
     font-style: italic;
     color: rgb(148, 148, 148);
+}
+
+/* underline cta */
+a {
+    font-family: "Dosis", sans-serif;
+    text-size-adjust: 115%;
+    text-decoration: underline dotted;
+    text-decoration-color:rgb(0, 51, 220);
+    color:  rgb(0, 51, 220);
+    /* padding-block: 0.3ex;
+    padding-inline: 0.4ex;  
+    background-color: rgb(255, 208, 0);  */
+}
+
+
+a:hover {
+    font-style: italic;
+    color: rgb(0, 51, 220);
+    text-decoration-color:rgb(0, 51, 220);
+    background-color: transparent;
+    border-radius: 0.2em;
+}
+
+/* main ctas */
+a:not(.underlinecta)  {
+    font-style: italic;
+    display: inline;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 51, 220);
+	margin-block-start: 0rem;
+    font-size: 1em;
+    padding-inline: 1ex;
+    padding-block: 0.3ex;
+    border-radius: 0.2rem;
+    font-style: normal;
+}
+
+a:not(.underlinecta):hover {
+    color: rgb(255, 255, 255);
+    font-style: Italic;
+    background-color: rgb(0, 0, 0);
+    text-decoration-color:rgb(255, 255, 255);
+}
+
+
+#tni, #navtop{
+    color: rgb(0, 0, 0);
+    background-color: transparent;
+    text-decoration: none;
+}
+
+#navtop:hover:, #tni:hover {
+    color: rgb(0, 0, 0);
+    background-color: transparent;
 }
 
