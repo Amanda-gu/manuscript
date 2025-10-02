@@ -30,9 +30,10 @@ body {
 
 /* body font size */
     p {       
-        font-family:ß "Rosarivo", serif;
+        font-family:"Rosarivo", serif;
         /* color: rgb(30, 29, 29); */
         line-height: 2em;     
+         text-wrap: pretty;
     }
 /* font size of subheads and pull quote */
     hgroup, blockquote {
