@@ -41,7 +41,7 @@ body {
          }    
     }
 
-    margin-block-end: 7%;
+    margin-block-end: 5rem;
 }
 
 
@@ -72,10 +72,11 @@ hgroup, blockquote, aside {
 header {
     position: sticky;
     inset-block-start: 0rem;
-    background-color:  rgba(245, 244, 244, 0.69);
+    background-color:  rgba(236, 236, 236, 0.69);
         /*bg blur  */
     backdrop-filter: blur(6px);
-        /* make it the foreground */
+        /* make it the foreground ref:
+        https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter */
     z-index: 10;
     
 
@@ -94,8 +95,8 @@ header {
 main {
     max-width: 1600px;
     margin-inline: auto;
-    padding-block-start: 1.5rem;
-    z-index: 5;    
+    padding-block-start: 2rem;
+  
 }
 
 
@@ -111,15 +112,13 @@ main {
 /* spacing */
 
 #maincontainer {
-
     padding-inline: 5rem;
-    max-inline-size: 75ch;
+    max-inline-size: 82ch;
 
-        /* spacing between sections heading and content */
+        /* spacing between sections. heading and content */
         section:not(:first-child) {
-        margin-block-start: 8%;
+        padding-block-start: 5rem;
         }
-
 
         /* space between article and response */
         article:not(:first-child){
@@ -137,21 +136,26 @@ main {
 /* spacing between h1 and author */
         #italicleft, #responseright {
             .authornametime{
-                margin-block-start: 0.8rem;
-            
+                padding-block-start: 0.8rem;          
             } 
         }
 
         #italicleft {           
             hgroup{
+
 /* spacing between within the box*/                
             .authorinfo{
+
+                margin-block-start: 1.4rem;
+                padding-block-start: 1rem;
+
                    p {
                     margin-block-start: 0.3rem;
                    }
                 }
+
             .moreauthorlinks{
-                margin-block-start: 0;
+                padding-block-start: 1rem;
                 }
             
          }
@@ -196,24 +200,48 @@ main {
 /* sidebar */
 /* todo: add a box around? */
 
-.jumplinks {
-    position: fixed;
+.sidebar {
+/* positoin research :https://developer.mozilla.org/en-US/docs/Web/CSS/position */
+    position: sticky;
+    top: 5rem;
     line-height: 2rem;
-    width: 100%;
-    max-width: 1600px;
+    float: right;
     padding-inline: 5rem;
     color:rgb(255, 255, 255);
+
 /* align-items reference https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container */
-    display: flex; 
+
+/* display:grid; https://developer.mozilla.org/en-US/docs/Web/CSS/display */
+    /* display: flex; 
     align-items: right;
-    justify-content: right;
+    justify-content: right; */
 
-    ul {
+    section {
 
-        background-color: rgb(0, 51, 220);
+        background-color: rgba(236, 236, 236, 0.69);;
         padding-inline: 1.5rem;
         padding-block: 1.3rem;
         border-radius: 0.4rem;
+
+        summary {
+                border-bottom: dotted;
+                border-color: black;
+                font-weight:700;
+                padding-block-end: 0.5rem;
+                margin-block-end: 1.5rem;
+            }
+            p {
+                text-indent: 1rem;
+            }
+
+            p:first-child {
+                padding-block-start:2rem;
+                }
+
+        details:first-child {
+            margin-block-end: 2rem;
+        }
+       
     }
 
     
@@ -233,14 +261,14 @@ main {
        
         font-size: 0.8rem;
         color: rgb(99, 99, 99);
-}
+    }
 }
 
 #responseright {
-   background-color:  rgba(232, 233, 245, 0.54);
+   background-color:rgb(228, 249, 228);
    padding-inline: 8%;
    padding-block: 10%;
-   color: rgba(0, 0, 0);
+   color: black;
    border-radius: 0.4rem;
 
    section p{
@@ -255,7 +283,6 @@ main {
         }
        
         font-size: 0.8rem;
-        color: rgb(99, 99, 99);
         margin-left: 0;
     }
 
@@ -263,7 +290,6 @@ main {
         font-family: "Dosis", sans-serif;
         font-size: 0.8em;
         margin-block-start: 2rem;
-
     }
 
 }
@@ -280,7 +306,6 @@ h1, nav, #tni {
 /* article/response title */
 h2 {
     font-size: 2rem;
-    position: sticky;   
 }
 
 /* section title */
@@ -290,10 +315,6 @@ h3 {
     padding-block: 0.8ex;
     border-bottom: dotted;
     border-color: black;
-    /* position: sticky;
-    inset-block-start: 4rem; */
-    background-color: rgb(250, 249, 247);
-    backdrop-filter: blur(3px);
 }
 
 /* pullquote title */
@@ -330,8 +351,8 @@ h4 {font-size: 1.2rem;}
     }
 
     .authorcontent{
-        font-size: 0.8rem;
-        line-height: 1.2rem;
+        /* font-size: 0.8rem; */
+        line-height: 1.4rem;
         padding-block-start: 0.45rem;
         }
 
@@ -368,8 +389,7 @@ blockquote {
     color: rgb(99, 34, 34);  
     #quote
        {font-style: italic; 
-        font-size: 0.8rem;  
-        color: rgb(0, 0, 0);     
+        font-size: 1rem;    
     }  
 }  
 
@@ -401,12 +421,24 @@ sup {
 
 
 /* special font styples */
-strong {
-    font-weight: 600;
+.makebold {
+    font-weight: bold;
+}
+
+.makehighlight {
+    background-color:rgb(228, 249, 228);
+    padding-inline: 0.4rem;
+    padding-block: 0.3rem;
 }
 
 
-/* cta styles */
+.makehighlight-response {
+    background-color:black;
+    color: white;
+    padding-inline: 0.4rem;
+    padding-block: 0.6rem;
+}
+
 
 #starter {
     font-size:2em;
@@ -462,7 +494,7 @@ strong {
 
 
 .makeiranic {
-    transform: skew(4deg);
+    transform: skew(-4deg);
 }
 
 .makeblackletter {  
@@ -507,7 +539,7 @@ a:hover {
     color: rgb(0, 51, 220);
     text-decoration-color:rgb(0, 51, 220);
     background-color: transparent;
-    border-radius: 0.2em;
+    
 }
 
 /* main ctas */
@@ -532,14 +564,15 @@ a:not(.underlinecta):hover {
 }
 
 
-#tni, #navtop{
+.italicta {
     color: rgb(0, 0, 0);
     background-color: transparent;
     text-decoration: none;
 }
 
-#navtop:hover:, #tni:hover {
-    color: rgb(0, 0, 0);
+.italicta:hover {
+    color: dimgrey;
     background-color: transparent;
+    text-decoration: none;
+    font-style: normal;
 }
-
