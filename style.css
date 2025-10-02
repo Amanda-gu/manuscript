@@ -115,12 +115,12 @@ main {
     padding-inline: 5rem;
     max-inline-size: 82ch;
 
-        /* spacing between sections. heading and content */
+/* spacing between sections. heading and content */
         section:not(:first-child) {
         padding-block-start: 5rem;
         }
 
-        /* space between article and response */
+/* space between article and response */
         article:not(:first-child){
         margin-block-start: 7rem;
         }
@@ -174,6 +174,15 @@ main {
                 padding-inline-start: 20%;
     
             }
+
+
+
+        #related{
+
+            p{
+             margin-block-start: 0rem;
+            }
+            }
         }
 
 
@@ -183,15 +192,7 @@ main {
         }
 
 
-/* spacing between the border line and related content*/
-        #related{
-
-            margin-block-start: 3rem;
-
-            p{
-             margin-block-start: 1.2rem;
-            }
-        }
+     
 
 }
 
@@ -364,14 +365,18 @@ h4 {font-size: 1.2rem;}
 
 
 #related {
-    border-block-start: solid;
-    border-width: 0.05rem;
-    border-block-start-color: rgb(148, 148, 148);
     font-size: 0.8rem;
     line-height: 1.5rem;
-
+    
+    section {
+        padding-block-start: 1rem;
+        border-block-start: solid;
+        border-width: 0.05rem;
+        border-block-start-color: rgb(148, 148, 148);
+    }
     p {
-        font-family: "Dosis", sana-serif;
+       
+        font-family: "Dosis", sans-serif;
         color:rgb(148, 148, 148);
     }
     
