@@ -191,9 +191,6 @@ main {
              margin-block-start: 8rem; 
         }
 
-
-     
-
 }
 
 
@@ -432,15 +429,13 @@ sup {
 
 .makehighlight {
     background-color:rgb(228, 249, 228);
-    padding-inline: 0.4rem;
     padding-block: 0.3rem;
 }
 
 
 .makehighlight-response {
-    background-color:black;
-    color: white;
-    padding-inline: 0.4rem;
+    background-color:rgb(213, 234, 213);
+    color: black;
     padding-block: 0.6rem;
 }
 
