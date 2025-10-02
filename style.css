@@ -30,7 +30,7 @@ body {
 
 /* body font size */
     p {       
-        font-family: "Rosarivo", serif;
+        font-family:ß "Rosarivo", serif;
         /* color: rgb(30, 29, 29); */
         line-height: 2em;     
     }
@@ -38,6 +38,10 @@ body {
     hgroup, blockquote {
          p, time {
             font-size: 1rem;
+
+            /* gg search for making the rag look good: https://www.google.com/search?q=how+to+get+rid+of+widow+words+in+css&rlz=1C5CHFA_enUS1176US1176&oq=how+to+get+rid+of+widow+words+in+css&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQIRigATIHCAIQIRigATIHCAMQIRigATIHCAQQIRigAdIBCTEwODkyajBqNKgCA7ACAfEFA0lxLON8L47xBQNJcSzjfC-O&sourceid=chrome&ie=UTF-8 */
+            text-wrap: pretty;
+            
          }    
     }
 
@@ -113,7 +117,7 @@ main {
 
 #maincontainer {
     padding-inline: 5rem;
-    max-inline-size: 82ch;
+    max-inline-size: 83ch;
 
 /* spacing between sections. heading and content */
         section:not(:first-child) {
@@ -146,7 +150,7 @@ main {
 /* spacing between within the box*/                
             .authorinfo{
 
-                margin-block-start: 1.4rem;
+                margin-block-start: 1.6rem;
                 padding-block-start: 1rem;
 
                    p {
@@ -303,12 +307,13 @@ h1, nav, #tni {
 
 /* article/response title */
 h2 {
-    font-size: 2rem;
+    font-size: 2.8rem;
+    font-weight: 600;
 }
 
 /* section title */
 h3 {
-    font-size: 1rem;
+    font-size: 1.6rem;
     color: rgb(0, 0, 0);
     padding-block: 0.8ex;
     border-bottom: dotted;
@@ -349,7 +354,7 @@ h4 {font-size: 1.2rem;}
     }
 
     .authorcontent{
-        /* font-size: 0.8rem; */
+        font-size: 0.8rem;
         line-height: 1.4rem;
         padding-block-start: 0.45rem;
         }
@@ -478,15 +483,14 @@ sup {
     text-decoration: underline;
 }
 
-/* this line not working */
 
 
-.makeslanted p{ 
+#slanted p{ 
     transform: skew(4deg);
     display: inline-block;
 }
 
-.makeslanted p:hover{ 
+#slanted p:hover{ 
     transform: skew(-4deg);
     display: inline-block;
 }
