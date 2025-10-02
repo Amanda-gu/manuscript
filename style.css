@@ -266,7 +266,7 @@ main {
 }
 
 #responseright {
-   background-color:rgb(228, 249, 228);
+   background-color:rgba(228, 249, 228, 0.775);
    padding-inline: 8%;
    padding-block: 10%;
    color: black;
@@ -441,7 +441,7 @@ sup {
 
 
 .makehighlight-response {
-    background-color:rgb(213, 234, 213);
+    background-color:rgb(205, 233, 205);
     color: black;
     padding-block: 0.6rem;
 }
