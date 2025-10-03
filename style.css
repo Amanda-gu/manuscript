@@ -6,10 +6,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
 
+/* five years later */
+@import url(https://db.onlinewebfonts.com/c/cae463692f633b35ed7a23be7d1bc90a?family=Five+Years+Later+Rotated);
+@import url(https://db.onlinewebfonts.com/c/f24e7ed7dbada07bc770b0f135f6f57f?family=FiveYearsLater);
+
+
 @font-face {
 	font-family: 'Chaplin';
 	src: 
     url('Chaplin-Regular.otf') format(OpenType);
+
+	font-family: 'MonoIranic';
+	src: 
+    url('PanamaMonospaceIranic.otf') format('opentype');
+
+    font-family: 'MonoItalic';
+	src: 
+    url('PanamaMonospaceItalic.otf') format('opentype');
+
+    font-family: 'ProportionalIranic';
+	src: 
+    url('PanamaProportionalIranic.otf') format('opentype');
+
+    font-family: 'ProportionalItalic';
+	src: 
+    url('PanamaProportionalItalic.otf') format('opentype');
 }
 
 
@@ -121,13 +142,19 @@ main {
 /* spacing between sections. heading and content */
         section:not(:first-child) {
         padding-block-start: 5rem;
+        
+            .examples{
+                padding-block-start: 2rem;
+            }
         }
+
 
 /* space between article and response */
         article:not(:first-child){
         margin-block-start: 7rem;
         }
 
+       
         footer {
             margin-block-start: 2.5rem;
             text-align: left;
@@ -135,12 +162,19 @@ main {
 /* spacing between ps */
         section p:not(:first-child){
             margin-block-start: 3rem;             
-        }
+        } 
+        
+        
+
 /* spacing between h1 and author */
         #italicleft, #responseright {
             .authornametime{
                 padding-block-start: 0.8rem;          
             } 
+
+            .examplesdes {
+                margin: 0;
+            }
         }
 
         #italicleft {           
@@ -383,10 +417,6 @@ h4 {font-size: 1.2rem;}
     
 }
 
-#related:hover {
-    transform: skew(2deg);
-}
-
 /* quote */
 /* how to make a hanging list? */
 
@@ -410,6 +440,7 @@ aside p{
     padding-block-start: 0.5rem;
     padding-inline-start: 0;
     font-size: 0.8rem;
+    line-height: 1.4rem;
     padding-inline-end: 30%;
     color: rgb(0, 51, 220);
 }
@@ -489,21 +520,18 @@ sup {
 
 #slanted {
     
-    p{ 
-    transform: skew(4deg);
+    .makeiranic:hover{ 
+    transform: skew(0deg);
     display: inline-block;
 }
 
-    p:hover{ 
-    transform: skew(-4deg);
-    display: inline-block;  
 }
-}
+
 
 /* transform does not apply to inline objects */
 .makeiranic {
     display: inline-block;
-    transform: skew(7deg);
+    transform: skew(6deg);
 }
 
 
@@ -533,6 +561,23 @@ footer {
     font-style: italic;
     color: rgb(148, 148, 148);
 }
+
+/* panama fonts*/
+#monoitalic {
+    font-family: "MonoItalic", sans-serif;
+}
+
+#monoiranic {
+    font-family: "MonoIranic", sans-serif;
+}
+#proitalic {
+    font-family: "ProportionalItalic", sans-serif;
+}
+#proiranic {
+    font-family: "ProportionalIranic", sans-serif;
+}
+
+
 
 /* underline cta */
 a {
@@ -584,3 +629,77 @@ a:not(.underlinecta):hover {
     text-decoration: none;
     font-style: normal;
 }
+
+
+.examples {
+    
+    display: grid;
+
+    p {
+        transform: none;
+    }
+
+    .examplesdes {
+            font-family: "Dosis", sans-serif;
+            color: dimgray;
+            font-size: 0.8rem;
+        }
+/* soap example */
+
+    .soap {
+        display: grid;
+        
+        #soaproman, #soapfake, #soaptrue {
+        font-family: Helvetica, sans-serif;
+        font-size: 8rem;
+        line-height: 8rem; 
+        }
+        #soapfake {
+            transform: skew(-8deg);
+        }
+        #soaptrue {
+            font-style: bold italic;
+        }    
+    }
+    
+
+
+/* five years later rotation example */
+
+
+    #fiveyearslaterreg{
+        font-family: "FiveYearsLater";
+        font-size: 6em;
+        line-height: 6rem;
+    }
+
+    #fiveyearslaterrotate{
+        font-family: "Five Years Later Rotated";
+        font-size: 6em;
+        line-height: 6rem;
+
+    }
+ 
+
+/* chinese example */
+
+/* chinese fonts research https://gist.github.com/alex1504/112b462fbc08722a33a8915254410e22 */
+    #chineseitalic {
+        font-family: "STHeiti";
+        font-size:3em;
+        display: inline-block;
+        transform: skew(-7deg);
+       
+    }
+
+    #chinesekai {
+        /* font-family: "STHeiti"; */
+        alignment-baseline: central;
+        font-size:2em;
+        #kaiti {
+            font-family: "STKaiti","楷体_GB2312";;
+        }
+    }
+    
+
+    }   
