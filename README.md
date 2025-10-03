@@ -1,0 +1,3 @@
+# This is Typography and Interaction Project 1
+The article I chose is called Italics by Roman Gornitsky. He founded the typefoundry The Temporary State. This article talks about the history, design, function, and international uses of italics. Author challenges that we take a different approach at designing "italics". In his case, he designed a revered leaning italic for Panoma font family released by The Temporary State. It also serves as an update post for that font family. 
+At the end of the site, I included my reflection on the essay. I also included links that I came across during research.
